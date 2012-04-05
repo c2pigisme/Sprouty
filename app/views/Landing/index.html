@@ -1,0 +1,2714 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:addthis="http://www.addthis.com/help/api-spec" xml:lang="en"
+	lang="en">
+<head
+	prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# foodspotting: http://ogp.me/ns/fb/foodspotting#">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+
+<title>Foodspotting</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description"
+	content="Foodspotting is a visual guide to good food and where to find it. It's the easiest way to find and share the foods you love.">
+<meta name="keywords"
+	content="dishes, dish, food, reviews, food photos, restaurants, dining, guide, food spotting, menu, local">
+<meta property="twitter:user_id" content="38883394" />
+<!-- server: www. | false | http | SSL is off -->
+
+<!--[if (!IE)|(gte IE 8)]><!-->
+<link href="/public/assets/base-datauri.css" media="all"
+	rel="stylesheet" type="text/css" />
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link href="/assets/base-mhtml.css?1327560950" media="all" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="/public/assets/jquery.js" type="text/javascript"></script>
+<script src="/public/assets/base.js" type="text/javascript"></script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token"
+	content="oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=" />
+
+
+<script type='text/javascript'>
+      <!--
+        
+      -->  
+    </script>
+
+<script type='text/javascript'> 
+      //<![CDATA[
+        document.observe("dom:loaded", function() {
+          if(!$('nav-bar').hasClassName('logged-in')) {
+            FS.check_authenticated();
+          }
+          $$('label.prompted').each(setupPromptedField);
+          
+
+          
+        });
+      //]]>
+    </script>
+
+<style type="text/css">
+</style>
+
+<script type="text/javascript" src="http://use.typekit.com/gmg0plj.js"></script>
+<script type="text/javascript">
+      try{Typekit.load();}catch(e){}
+    </script>
+
+<!--[if lte IE 8]> 
+      <link href="/stylesheets/iex.css?1327560950" media="all" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+<!--[if lte IE 6]> 
+      <link href="/stylesheets/ie6.css?1327560950" media="all" rel="stylesheet" type="text/css" />
+    <![endif]-->
+</head>
+
+<body>
+	<div id='modal' style='display: none'>
+		<div class='small' id='modal-facebox'>
+			<a href="#" id="close-modal"
+				onclick="FS.clear_modal(); return false;">close</a>
+			<div id='modal-content'></div>
+		</div>
+		<div id='modal-screen'></div>
+	</div>
+
+	<div id='wrapper' class='clearfix'>
+		<div id='tooltip' style='display: none'>
+			<div class='content'></div>
+			<div class='pointer'></div>
+		</div>
+
+		<div id='header'>
+			<div class='clearfix logged-in' id='nav-bar'>
+				<div class='content'>
+
+					<div id='mini-profile'>
+						<div class='current_person'>
+							<a href="/332070-miao-kia-tan" class="name">Miao Kia Tan</a> <span
+								class='divider'>&middot;</span> <a href="/logout"
+								data-method="delete" rel="nofollow">Log out</a>
+						</div>
+						<a href="/">Dashboard</a> <span class='divider'>&middot;</span> <a
+							href="/settings">Settings</a> <span class='divider'>&middot;</span>
+						<a href="/332070-miao-kia-tan/notifications">Notifications<span
+							id="notifications-count" class="">0</span>
+						</a>
+						<script>
+  //<![CDATA[
+    FS.Notifications.init("/people/332070-miao-kia-tan/notifications/check");
+  //]]>
+</script>
+
+					</div>
+
+					<a href="/" id="logo-small"><img alt="Logo-175px"
+						src="/images/logo-175px.png?1327560950" />
+					</a>
+					<ul>
+						<li class='on'><a href="/explore">Explore</a>
+						</li>
+						<li><a href="/guides">Guides</a>
+						</li>
+						<li><a href="/people">People</a>
+						</li>
+						<li><a href="/about">About</a>
+						</li>
+						<li><a href="/apps">Apps</a>
+						</li>
+						<li class='last'><a href="/blog">Blog</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id='flash_notice' style='display: none'>
+				<div></div>
+			</div>
+
+
+
+		</div>
+
+
+		<div id='partner-header'
+			style='background-color: #99b2ce; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;'>
+			<form accept-charset="UTF-8"
+				action="http://www.foodspotting.com/explore" class="default"
+				id="map_search" method="post"
+				onsubmit="if (FSMap.check_submittable()) { FSMap.prepare_search(); new Ajax.Request('http://www.foodspotting.com/explore', {asynchronous:true, evalScripts:true, parameters:Form.serialize(this)}); }; return false;">
+				<div style="margin: 0; padding: 0; display: inline">
+					<input name="utf8" type="hidden" value="&#x2713;" /><input
+						name="authenticity_token" type="hidden"
+						value="oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=" />
+				</div>
+				<div style='display: none'>
+					<input id="ajax_datetime" name="ajax" type="hidden" value="1" /> <input
+						id="page_hidden_field" name="page" type="hidden" /> <input
+						id="sort_hidden_field" name="sort" type="hidden" /> <input
+						id="filter_hidden_field" name="filter" type="hidden" /> <input
+						id="query_hidden_field" name="q" type="hidden" value="food" /> <input
+						id="loc_hidden_field" name="loc" type="hidden" value="Malaysia" />
+					<input id="sw_hidden_field" name="sw" type="hidden" /> <input
+						id="ne_hidden_field" name="ne" type="hidden" /> <input
+						id="lat_hidden_field" name="lat" type="hidden" /> <input
+						id="lng_hidden_field" name="lng" type="hidden" /> <input
+						id="track_search" name="track_search" type="hidden" /> <input
+						id="track_location" name="track_location" type="hidden" />
+				</div>
+				<fieldset id='map_fields'>
+					<input class="submit" type="submit" value="Search" />
+					<div id='location-input'>
+						<div class='text-box'>
+							<a class="clear" href="#" id="location_clear_button"
+								onclick="FSMap.clear_location();; return false;"
+								style="display: none">x</a> <label class="prompted"
+								for="location" id="set_location_label">EXPLORE FOODS
+								SPOTTED IN: <strong>Malaysia</strong>
+							</label> <input class="text" id="location"
+								onfocus="FSMap.show_saved_locations()" type="text" value="" />
+							<div id='saved_locations' style='display: none'>
+								<ul id='saved_location_ul'>
+									<li class='anywhere'><a href="#"
+										onclick="FSMap.clear_location(); return false;"><img
+											alt="Clear" src="/images/clear.png?1327560950" />Anywhere</a>
+									</li>
+									<li class='saved-locations-title'>Saved Locations:</li>
+									<li><a href="#"
+										onclick="FSMap.select_location('Malaysia'); return false;">Malaysia</a>
+									</li>
+									<li><a href="#"
+										onclick="FSMap.select_location('Canada'); return false;">Canada</a>
+									</li>
+									<li><a href="#"
+										onclick="FSMap.select_location('1, Malaysia'); return false;">1,
+											Malaysia</a>
+									</li>
+									<li><a href="#"
+										onclick="FSMap.select_location('Konsulat Amerika Serikat, Jalan Hayam Wuruk, Denpasar, Indonesia'); return false;">Konsulat
+											Amerika Serikat, Jalan Hayam Wuruk, Denpasar, Indonesia</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<div class='text-box' id='genius-search-input' style='z-index: 1'>
+						<a class="clear" href="#" id="query_clear_button"
+							onclick="FSMap.clear_query(); return false;"
+							style="display: none">x</a> <label class="prompted" for="query"
+							id="genius-label">SEARCH BY: <strong></strong>
+						</label>
+						<div id="genius-search" class="live-search">
+							<div class="spinner" style="display: none">
+								<img alt="Spinner" src="/images/spinner.gif?1327560950" />
+							</div>
+							<input class="text" id="query" name="query"
+								onkeydown="if(event.keyCode == 9) {return false;}" type="text"
+								value="" />
+							<div class="results-container" style="position: absolute">
+								<ul id="genius_results" class="results" style="display: none;">
+									<li class="status"></li>
+									<li style="display: none"></li>
+								</ul>
+							</div>
+						</div>
+
+						<script type="text/javascript">
+  document.observe("dom:loaded", function() {
+    $("genius-search").searcher = new LiveSearch("genius-search", "/search/genius", "", "Start typing to get suggestions...", (false || false))
+  });
+</script>
+
+					</div>
+				</fieldset>
+			</form>
+
+			<div id='map-pagination'>
+				<a href="#" id="page-right" onclick="; return false;">Next 20</a> <a
+					href="#" id="page-left" onclick="; return false;">Previous 20</a>
+				<div class='clearfix' id='map-sorts'>
+					<a class="first" href="#" id="map-sort-best"
+						onclick="FSMap.update_sort('best'); return false;">Best</a> <a
+						href="#" id="map-sort-latest"
+						onclick="FSMap.update_sort('latest'); return false;">Latest</a> <a
+						href="#" id="map-sort-following"
+						onclick="FSMap.update_filter('following'); return false;">Following</a>
+					<a href="#" id="map-sort-wanted"
+						onclick="FSMap.update_filter('wanted'); return false;">Wanted</a>
+					<a class="last" href="#" id="map-sort-guides"
+						onclick="FSMap.update_filter('guides'); return false;">Guides</a>
+				</div>
+			</div>
+
+			<div id='discover-map'>
+				<div id='map-loading-box' style='display: none'></div>
+				<div id='map-message-box' style='display: none'></div>
+				<div id='map'></div>
+			</div>
+		</div>
+
+
+
+
+		<div id='container' class='clearfix'>
+			<a href="#" id="back_to_map"
+				onclick="FS.hide_back_to_map();; return false;"
+				style="display: none">Take me Back To The Map!</a>
+
+			<div id='content' class='clearfix'>
+
+				<div id='discover-bar'>
+					<div class='hgroup clearfix'>
+						<div id='social-icons'>
+							<iframe
+								src="http://www.facebook.com/plugins/like.php?app_id=113546388732162&amp;href=www.facebook.com%2Ffoodspotting&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=35"
+								scrolling="no" frameborder="0"
+								style="border: none; overflow: hidden; width: 300px; height: 35px;"
+								allowTransparency="true"></iframe>
+						</div>
+						<h1 id='list-view-title'>
+							The best <strong>Food</strong> in <strong>Malaysia</strong>
+						</h1>
+					</div>
+				</div>
+
+				<div class='explore clearfix' id='new-sighting-form'>
+					<div id='user-info-window'>
+						<strong>More ways to share</strong> <a
+							href="http://itunes.apple.com/us/app/foodspotting/id350727118?mt=8"
+							class="tooltip" title="Download the iPhone App">iPhone</a>, <a
+							href="https://market.android.com/details?id=com.foodspotting"
+							class="tooltip" title="Download the Android App">Android</a>, <a
+							href="http://www.windowsphone.com/en-US/apps/55b55f3e-649b-e011-986b-78e7d1fa76f8"
+							class="tooltip" title="Download the WinPho App">Windows Phone</a>,
+						<a href="http://appworld.blackberry.com/webstore/content/32713"
+							class="tooltip" title="Download the Blackberry App">Blackberry</a>,
+						<a href="/settings/notifications" class="tooltip"
+							title="Connect your Instagram account and tag your photos #food or #foodspotting">Instagram</a>,
+						<a href="/settings" class="tooltip"
+							title="Email your photos to food@foodspotting.com. You may need to add a secondary email address.">Email</a>
+					</div>
+
+					<div id='review-widget'>
+						<form accept-charset="UTF-8" action="/reviews" class="new_review"
+							enctype="multipart/form-data" id="review-widget-form"
+							method="post" onsubmit="return false">
+							<div style="margin: 0; padding: 0; display: inline">
+								<input name="utf8" type="hidden" value="&#x2713;" /><input
+									name="authenticity_token" type="hidden"
+									value="oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=" />
+							</div>
+							<div id='uploading' style='display: none'>
+								<div>Posting your sighting...</div>
+								<img alt="Sighting-submit-cream"
+									src="/images/sighting-submit-cream.gif?1327560950" />
+							</div>
+							<fieldset>
+								<div class='errors' id='review-widget-error'
+									style='display: none'></div>
+								<div>
+									<input id="review_return_to" name="review[return_to]"
+										type="hidden" value="" /> <input id="review_item_id"
+										name="review[item_id]" type="hidden" value="1300" /> <input
+										id="item_name" name="item[name]" type="hidden" value="Food" />
+									<input id="item_id" name="item[id]" type="hidden" value="1300" />
+									<input id="item_parent_id" name="item[parent_id]" type="hidden" />
+									<input id="review_place_id" name="review[place_id]"
+										type="hidden" /> <input id="place_name" name="place[name]"
+										type="hidden" /> <input id="place_twitter"
+										name="place[twitter]" type="hidden" /> <input
+										id="place_venue" name="place[venue]" type="hidden" /> <input
+										id="place_street_address" name="place[street_address]"
+										type="hidden" /> <input id="place_city" name="place[city]"
+										type="hidden" /> <input id="place_state" name="place[state]"
+										type="hidden" /> <input id="place_postal_code"
+										name="place[postal_code]" type="hidden" /> <input
+										id="place_country" name="place[country]" type="hidden" /> <input
+										id="place_phone_number" name="place[phone_number]"
+										type="hidden" /> <input id="place_latitude"
+										name="place[latitude]" type="hidden" /> <input
+										id="place_longitude" name="place[longitude]" type="hidden" />
+									<input id="place_google_id" name="place[google_id]"
+										type="hidden" /> <input id="place_ddurl" name="place[ddurl]"
+										type="hidden" />
+								</div>
+								<div class='clearfix'>
+									<div id='spot-label'>
+										<div id='file-upload'>
+											<label for='review_photo' id='file-value'>Share a
+												food (or drink!) you recommend</label> <input class="file-field"
+												id="review_photo" name="review[photo]" type="file" />
+										</div>
+									</div>
+								</div>
+								<div class='clearfix' id='review-fields' style='display: none'>
+									<div id='optional-fields'>
+										<div class='row clearfix'>
+											<div class='text-box' style='z-index: 1'>
+												<a class="clear" href="#" id="review_item_x"
+													onclick="$('review-item-search').searcher.clear();$(this).hide();; return false;"
+													style="display: none">x</a> <label class="prompted"
+													for="review_item" id="review_item_label">Specify
+													Food</label>
+												<div id="review-item-search" class="live-search">
+													<div class="spinner" style="display: none">
+														<img alt="Spinner" src="/images/spinner.gif?1327560950" />
+													</div>
+													<input class="text" id="review_item" name="review_item"
+														onkeydown="if(event.keyCode == 9) {return false;}"
+														type="text" value="" />
+													<div class="results-container" style="position: absolute">
+														<ul id="item-results" class="results"
+															style="display: none;">
+															<li class="status"></li>
+															<li style="display: none"></li>
+														</ul>
+													</div>
+												</div>
+
+												<script type="text/javascript">
+  document.observe("dom:loaded", function() {
+    $("review-item-search").searcher = new LiveSearch("review-item-search", "/items/search", "review_item_id", "Start typing to get suggestions...", (true || false))
+  });
+</script>
+
+											</div>
+											<span class='at'>@</span>
+											<div class='text-box' style='z-index: 2'>
+												<a class="clear" href="#" id="review_place_x"
+													onclick="$('review-place-search').searcher.clear();$(this).hide();; return false;"
+													style="display: none">x</a> <label class="prompted"
+													for="review_place" id="review_place_label">Specify
+													Place</label>
+												<div id="review-place-search" class="live-search">
+													<div class="spinner" style="display: none">
+														<img alt="Spinner" src="/images/spinner.gif?1327560950" />
+													</div>
+													<input class="text" id="review_place" name="review_place"
+														onkeydown="if(event.keyCode == 9) {return false;}"
+														type="text" value="" />
+													<div class="results-container" style="position: absolute">
+														<ul id="place-results" class="results"
+															style="display: none;">
+															<li class="status"></li>
+															<li style="display: none"></li>
+														</ul>
+													</div>
+												</div>
+
+												<script type="text/javascript">
+  document.observe("dom:loaded", function() {
+    $("review-place-search").searcher = new LiveSearch("review-place-search", "/places/search", "review_place_id", "Start typing to get suggestions...", (true || false))
+  });
+</script>
+
+											</div>
+										</div>
+										<div class='row clearfix' style='margin-top: 10px'>
+											<div class='text-box text-area-box'>
+												<label class="prompted" for="review_note">Add a note</label>
+												<textarea class="text note" cols="40" id="review_note"
+													name="review[note]" rows="20"></textarea>
+											</div>
+										</div>
+										<div class='row clearfix' style='margin-top: 10px'>
+											<div class='text-box category'>
+												<a class="clear" href="#" id="item_parent_x"
+													onclick="$('item-parent-search').searcher.clear();$(this).hide();; return false;"
+													style="display: none">x</a> <label class="prompted"
+													for="item_parent">Type of...</label>
+												<div id="item-parent-search" class="live-search">
+													<div class="spinner" style="display: none">
+														<img alt="Spinner" src="/images/spinner.gif?1327560950" />
+													</div>
+													<input class="text" id="item_parent" name="item_parent"
+														onkeydown="if(event.keyCode == 9) {return false;}"
+														type="text" value="" />
+													<div class="results-container" style="position: absolute">
+														<ul id="item-parent-results" class="results"
+															style="display: none;">
+															<li class="status"></li>
+															<li style="display: none"></li>
+														</ul>
+													</div>
+												</div>
+
+												<script type="text/javascript">
+  document.observe("dom:loaded", function() {
+    $("item-parent-search").searcher = new LiveSearch("item-parent-search", "/items/search_parent", "item_parent_id", "This is a type of...", (false || false))
+  });
+</script>
+
+											</div>
+											<div class='text-box tags' id='tags'>
+												<label class="prompted" for="review_tags">Comma-Separated
+													Tags</label> <input class="text" id="review_tags"
+													name="review[tags]" onfocus="TagHints.init();" size="30"
+													type="text" />
+												<div class='results-container'>
+													<ul class='results' id='tag-hints' style='display: none'>
+														<li class='status'><strong>Sample tags:</strong> <br>
+															Vegan, Vegetarian, Gluten-Free, Dairy-Free, Cuisine Names
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class='row clearfix' style='margin-top: 10px'>
+										<div class='recessed-buttons' id='review-sharing'>
+											<ul class='clearfix'>
+												<li class='twitter' title='Share on Twitter'><label
+													for="tweet"><img alt="Twitter"
+														src="/images/clear.png?1327560950" />
+												</label> <input disabled="disabled" id="review-tweet-check"
+													name="tweet" style="display: none" type="checkbox" /> <a
+													class="review-connect-btn" href="#"
+													id="review-tweet-connect"
+													onclick="new FS.ClientConnect('twitter', '/twitter_auth/mock_create', function() { $('review-tweet-check').show(); $('review-tweet-check').removeAttribute('disabled'); $('review-tweet-check').checked = 1; $('review-tweet-connect').hide(); }); return false;"><img
+														alt="connect" src="/images/review-connect.png?1327560950" />
+												</a></li>
+												<li class='foursquare' title='Check-in on Foursquare'>
+													<label for="checkin"><img alt="Foursquare"
+														src="/images/clear.png?1327560950" />
+												</label> <input disabled="disabled" id="review-foursquare-check"
+													name="checkin" style="display: none" type="checkbox" /> <a
+													class="review-connect-btn" href="#"
+													id="review-foursquare-connect"
+													onclick="new FS.ClientConnect('foursquare', '/foursquare_auth/mock_create', function() { $('review-foursquare-check').show(); $('review-foursquare-check').removeAttribute('disabled'); $('review-foursquare-check').checked = 1; $('review-foursquare-connect').hide(); }); return false;"><img
+														alt="connect" src="/images/review-connect.png?1327560950" />
+												</a></li>
+												<li class='facebook' title='Share on Facebook'><label
+													for="facebook"><img alt="Facebook"
+														src="/images/clear.png?1327560950" />
+												</label> <input id="facebook" name="facebook" type="checkbox"
+													value="1" /></li>
+												<li class='flickr' title='Share on Flickr'><label
+													for="flickr"><img alt="Flickr"
+														src="/images/clear.png?1327560950" />
+												</label> <input disabled="disabled" id="review-flickr-check"
+													name="flickr" style="display: none" type="checkbox" /> <a
+													class="review-connect-btn" href="#"
+													id="review-flickr-connect"
+													onclick="new FS.ClientConnect('flickr', '/flickr_auth/mock_create', function() { $('review-flickr-check').show(); $('review-flickr-check').removeAttribute('disabled'); $('review-flickr-check').checked = 1; $('review-flickr-connect').hide(); }); return false;"><img
+														alt="connect" src="/images/review-connect.png?1327560950" />
+												</a></li>
+											</ul>
+										</div>
+										<input class="submit right" id="review_submit" name="commit"
+											onclick="if(submittable()) {FS.authenticate(&quot;$('review-widget-form').submit()&quot;, 'to post your sighting!', 'review');}; return false"
+											onmousedown="submit_clicked = true" type="submit"
+											value="Add Sighting!" />
+										<div class='tooltip' id='award_ribbon'
+											title='Nom recommendations you love most!'>
+											<input name="review[ribbon]" type="hidden" value="0" /><input
+												id="review_ribbon" name="review[ribbon]" type="checkbox"
+												value="1" /> <label for="review_ribbon">Nom it!</label>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+
+					</div>
+
+				</div>
+
+				<div class='sidebar right'>
+					<div id='sidebar-home'></div>
+					<div id='sidebar-home-item'>
+						<div id='sidebar-details'>
+							<div class='pod'>
+								<a class="follow-button primary-background-color" href="#"
+									id="Item_1300"
+									onclick="$('Item_1300').addClassName('loading');FS.authenticate(&quot;if ($('Item_1300').submittable != false) { new Ajax.Request('/followings?followable_id=1300&amp;amp;followable_type=Item&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Item_1300').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+									src="/images/clear.png?1327560950" />Follow</a>
+							</div>
+							<div class='pod cpod'>
+								<h2>About Food</h2>
+								<dl class='dlist pod clearfix' style='margin-bottom: 0'>
+									<dt>Links</dt>
+									<dd>
+										<a href="http://en.wikipedia.org/wiki/Special:Search/food">Wikipedia</a>
+									</dd>
+									<dt>Food Experts</dt>
+									<dd class='following-avatar-list clearfix'
+										style='margin-bottom: 0'>
+										<span class='avatar tooltip'
+											title='&lt;strong&gt;annimal&lt;/strong&gt;&lt;br /&gt;Food Expert'>
+											<a href="/166517-annimal"><img alt="Missing"
+												class="photo fn"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+										</a> </span> <span class='avatar tooltip'
+											title='&lt;strong&gt;dolce&lt;/strong&gt;&lt;br /&gt;Food Expert'>
+											<a href="/3705-dolce"><img alt="Missing" class="photo fn"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+										</a> </span> <span class='avatar tooltip'
+											title='&lt;strong&gt;Bernd Hædrich&lt;/strong&gt;&lt;br /&gt;Food Expert'>
+											<a href="/274397-bernd-h%C3%A6drich"><img
+												alt="Small_thumb" class="photo fn"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/274397/small_thumb.?1316533715" />
+										</a> </span> <span class='avatar tooltip'
+											title='&lt;strong&gt;Dan Cox&lt;/strong&gt;&lt;br /&gt;Food Expert'>
+											<a href="/164185-dan-cox"><img alt="Missing"
+												class="photo fn"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+										</a> </span> <span class='avatar tooltip'
+											title='&lt;strong&gt;Harold Rodríguez&lt;/strong&gt;&lt;br /&gt;Food Expert'>
+											<a href="/337375-harold-rodr%C3%ADguez"><img
+												alt="Missing" class="photo fn"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+										</a> </span>
+									</dd>
+								</dl>
+							</div>
+						</div>
+
+					</div>
+
+					<div class='clearfix' id='sidebar-local-guides'>
+						<div class='pod clearfix'>
+							<h2 class='primary-text-color'>Guides near Malaysia</h2>
+							<dl class='dlist pod clearfix'>
+								<dd>
+									<ul class='profile-guides-list clearfix'>
+										<li class='clearfix first guide' id='guide_819'>
+											<div class='custom-badge'
+												style='background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/819/small_thumb.jpg?1289471011)'>
+												<a href="/guides/819-what-to-eat-in-bangkok-"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/819-what-to-eat-in-bangkok-">WHAT TO
+													EAT in BANGKOK </a> <small>(<a href="/pichy">Pichy</a>)</small>
+												<div class='guide-standings'>105 followers</div>
+											</div></li>
+										<li class='clearfix guide' id='guide_141'>
+											<div class='custom-badge'
+												style='background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/141/small_thumb.jpg?1273302405)'>
+												<a href="/guides/141-top-hawker-fare-in-singapore"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/141-top-hawker-fare-in-singapore">Top
+													Hawker Fare in Singapore</a> <small>(<a href="/dor">Dor</a>)</small>
+												<div class='guide-standings'>91 followers</div>
+											</div></li>
+										<li class='clearfix guide' id='guide_621'>
+											<div class='custom-badge'
+												style='background-image: url(http://www.foodspotting.com/images/guides/badge_default_small_thumb.png)'>
+												<a href="/guides/621-foods-you-must-try-in-penang"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/621-foods-you-must-try-in-penang">Foods
+													you must try in Penang</a> <small>(<a
+													href="/bubbles182">bubbles182</a>)</small>
+												<div class='guide-standings'>63 followers</div>
+											</div></li>
+										<li class='clearfix first guide' id='guide_110'>
+											<div class='custom-badge'
+												style='background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/110/small_thumb.gif?1270450444)'>
+												<a href="/guides/110-sudah-makan----have-you-eaten---"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/110-sudah-makan----have-you-eaten---">Sudah
+													Makan? ( Have you eaten?) </a> <small>(<a
+													href="/christyT">Christy </a>)</small>
+												<div class='guide-standings'>56 followers</div>
+											</div></li>
+										<li class='clearfix guide' id='guide_960'>
+											<div class='custom-badge'
+												style='background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/960/small_thumb.jpg?1291638799)'>
+												<a href="/guides/960-good-eats-bangkok"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/960-good-eats-bangkok">Good Eats
+													Bangkok</a> <small>(<a href="/piplala">piplala</a>)</small>
+												<div class='guide-standings'>56 followers</div>
+											</div></li>
+										<li class='clearfix guide' id='guide_2230'>
+											<div class='custom-badge'
+												style='background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/2230/small_thumb.gif?1304742453)'>
+												<a href="/guides/2230-japanese-foods---bkk"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/2230-japanese-foods---bkk">Japanese
+													Foods @ BKK</a> <small>(<a href="/tsadvanced">tsadvanced</a>)</small>
+												<div class='guide-standings'>54 followers</div>
+											</div></li>
+										<li class='clearfix first guide' id='guide_821'>
+											<div class='custom-badge'
+												style='background-image: url(http://www.foodspotting.com/images/guides/badge_default_small_thumb.png)'>
+												<a href="/guides/821-bangkok-sleeplate-restaurant"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/821-bangkok-sleeplate-restaurant">Bangkok
+													Sleeplate Restaurant</a> <small>(<a href="/macroart">Apisilp
+														Trunganont</a>)</small>
+												<div class='guide-standings'>42 followers</div>
+											</div></li>
+										<li class='clearfix guide' id='guide_866'>
+											<div class='custom-badge'
+												style='background-image: url(http://www.foodspotting.com/images/guides/badge_default_small_thumb.png)'>
+												<a href="/guides/866-feast-east"><img alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/866-feast-east">feast@east</a> <small>(<a
+													href="/chopsticks">Chopsticks</a>)</small>
+												<div class='guide-standings'>32 followers</div>
+											</div></li>
+										<li class='clearfix guide' id='guide_1670'>
+											<div class='custom-badge'
+												style='background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/1670/small_thumb.png?1298997094)'>
+												<a href="/guides/1670-malaysia-makan-king"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/1670-malaysia-makan-king">Malaysia
+													Makan King</a> <small>(<a href="/138630-didi-mazril">Didi
+														Mazril</a>)</small>
+												<div class='guide-standings'>30 followers</div>
+											</div></li>
+										<li class='clearfix first guide' id='guide_1239'>
+											<div class='custom-badge'
+												style='background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/1239/small_thumb.?1295079291)'>
+												<a href="/guides/1239-top-10-hawker-food-in-singapore"><img
+													alt="Custom-50px"
+													src="/images/badges/custom-50px.png?1327560950" />
+												</a>
+											</div>
+											<div class='guide-stats' style='font-size: 1.1em'>
+												<a href="/guides/1239-top-10-hawker-food-in-singapore">Top
+													10 Hawker Food in Singapore</a> <small>(<a
+													href="/88812-eating-with-wild-abandon-">eating with
+														WILD abandon!</a>)</small>
+												<div class='guide-standings'>30 followers</div>
+											</div></li>
+									</ul>
+								</dd>
+							</dl>
+							<a href="/guides?sort=popular&amp;type=all" class="more-link">More
+								Guides</a>
+						</div>
+					</div>
+
+					<div id='sidebar-leaderboard'>
+						<div class='pod cpod'>
+							<h2>People to follow in Malaysia</h2>
+							<ul class='top_foodspotters'>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_140250"
+									onclick="$('Person_140250').addClassName('loading');FS.authenticate(&quot;if ($('Person_140250').submittable != false) { new Ajax.Request('/followings?followable_id=140250&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_140250').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a
+									href="/140250-yvonne-ng" class="avatar"><img
+										alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/140250/small_thumb.JPG?1326033082" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/140250-yvonne-ng">Yvonne
+												Ng</a>
+										</strong> <span class='points'> 66,570 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_30474"
+									onclick="$('Person_30474').addClassName('loading');FS.authenticate(&quot;if ($('Person_30474').submittable != false) { new Ajax.Request('/followings?followable_id=30474&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_30474').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a
+									href="/krishnalakshmi" class="avatar"><img
+										alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/30474/small_thumb.jpg?1313087401" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/krishnalakshmi">krishna
+												lakshmi</a>
+										</strong> <span class='points'> 81,625 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_148882"
+									onclick="$('Person_148882').addClassName('loading');FS.authenticate(&quot;if ($('Person_148882').submittable != false) { new Ajax.Request('/followings?followable_id=148882&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_148882').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a
+									href="/vanessallj" class="avatar"><img alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/148882/small_thumb.jpg?1314784255" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/vanessallj">Vanessa</a>
+										</strong> <span class='points'> 25,265 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_24663"
+									onclick="$('Person_24663').addClassName('loading');FS.authenticate(&quot;if ($('Person_24663').submittable != false) { new Ajax.Request('/followings?followable_id=24663&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_24663').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a href="/hannna"
+									class="avatar"><img alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/24663/small_thumb.JPG?1296906476" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/hannna">Hanna </a>
+										</strong> <span class='points'> 29,440 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_117910"
+									onclick="$('Person_117910').addClassName('loading');FS.authenticate(&quot;if ($('Person_117910').submittable != false) { new Ajax.Request('/followings?followable_id=117910&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_117910').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a
+									href="/117910-mm55" class="avatar"><img alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/117910/small_thumb.JPG?1296396401" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/117910-mm55">Mm55</a>
+										</strong> <span class='points'> 19,060 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_16348"
+									onclick="$('Person_16348').addClassName('loading');FS.authenticate(&quot;if ($('Person_16348').submittable != false) { new Ajax.Request('/followings?followable_id=16348&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_16348').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a
+									href="/hungrytyger" class="avatar"><img alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/16348/small_thumb.jpg?1273376598" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/hungrytyger">Hungry
+												Tyger</a>
+										</strong> <span class='points'> 26,665 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_132460"
+									onclick="$('Person_132460').addClassName('loading');FS.authenticate(&quot;if ($('Person_132460').submittable != false) { new Ajax.Request('/followings?followable_id=132460&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_132460').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a href="/julian"
+									class="avatar"><img alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/132460/small_thumb.jpg?1297824297" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/julian">Julian Ong</a>
+										</strong> <span class='points'> 24,300 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_6023"
+									onclick="$('Person_6023').addClassName('loading');FS.authenticate(&quot;if ($('Person_6023').submittable != false) { new Ajax.Request('/followings?followable_id=6023&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_6023').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a
+									href="/tanseaway" class="avatar"><img alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/6023/small_thumb.jpg?1268195015" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/tanseaway">Vincent
+												Tan</a>
+										</strong> <span class='points'> 21,155 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_125714"
+									onclick="$('Person_125714').addClassName('loading');FS.authenticate(&quot;if ($('Person_125714').submittable != false) { new Ajax.Request('/followings?followable_id=125714&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_125714').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a
+									href="/thistletea" class="avatar"><img alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/125714/small_thumb.jpg?1298471619" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/thistletea">thistle.tea</a>
+										</strong> <span class='points'> 16,435 points </span>
+									</div></li>
+								<li class='person clearfix'><a
+									class="follow-button primary-background-color" href="#"
+									id="Person_67699"
+									onclick="$('Person_67699').addClassName('loading');FS.authenticate(&quot;if ($('Person_67699').submittable != false) { new Ajax.Request('/followings?followable_id=67699&amp;amp;followable_type=Person&amp;amp;referrer=home', {asynchronous:true, evalScripts:true, method:'post', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); $('Person_67699').submittable=false; }&quot;, 'to follow', 'person_follow'); return false;"
+									rel="nofollow"><img alt="Clear"
+										src="/images/clear.png?1327560950" />Follow</a> <a
+									href="/67699-sandy-choo" class="avatar"><img
+										alt="Small_thumb"
+										src="http://s3.amazonaws.com/foodspotting-ec2/people/67699/small_thumb.jpg?1289660795" />
+								</a>
+									<div class='meta'>
+										<strong class='name'><a href="/67699-sandy-choo">Sandy
+												Choo</a>
+										</strong> <span class='points'> 4,520 points </span>
+									</div></li>
+
+							</ul>
+							<a href="/people" class="more-link">More Malaysia Spotters</a>
+						</div>
+
+
+					</div>
+
+				</div>
+
+				<div class='main' id='discover-list'>
+					<ul class='dishes list'>
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_24504'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_19 ribbon' id='ribbon_sighting_24504'>
+										19 <small>noms</small>
+									</div>
+									<a href="/reviews/27957" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/27957/thumb_170.jpg?1269727783" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/6368-wong-liong-hung" class="avatar tooltip"
+												title="Wong Liong Hung"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/235857-ooi-chau-lim" class="avatar tooltip"
+												title="Ooi Chau Lim"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/235857/small_thumb.?1313839360" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/12548-food-foundary-petaling-jaya/items/14968-mille-crepe"
+											onclick="toggleReviews(this, '/places/12548-food-foundary-petaling-jaya/items/14968-mille-crepe'); return false;"
+											title="Mille Crepe @ Food Foundary">Mille Crepe</a> <small>
+											@ <a href="/places/12548-food-foundary-petaling-jaya"><strong>Food
+													Foundary</strong> - <span>Petaling Jaya, Selangor</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/6368-wong-liong-hung">Wong Liong
+											Hung</a> almost 2 years ago from web.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/14968-mille-crepe">like
+												this</a> / <a href="/places/12548-food-foundary-petaling-jaya">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/12548-food-foundary-petaling-jaya/items/14968-mille-crepe?per_page=10'); return false;">
+													<span class="count">2</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_24504'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/24504/want?review_id=27957', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('jXj4BeAFllwP2jvqy9sOXWppZNTpMQLA1FMB62tkZok=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (23)</a></li>
+											<li class='nom-it' id='nom_sighting_24504'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/24504/nom?review_id=27957', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('jXj4BeAFllwP2jvqy9sOXWppZNTpMQLA1FMB62tkZok=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">19</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_24504'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=27957&amp;amp;sighting_id=24504', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('jXj4BeAFllwP2jvqy9sOXWppZNTpMQLA1FMB62tkZok=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_24504'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_147445'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_18 ribbon' id='ribbon_sighting_147445'>
+										18 <small>noms</small>
+									</div>
+									<a href="/reviews/317023" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/317023/thumb_170.jpg?1295959174" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/117910-mm55" class="avatar tooltip" title="Mm55"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/117910/small_thumb.JPG?1296396401" />
+											</a> <a href="/64043-rhaizo-" class="avatar tooltip"
+												title="rhAizo. "><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/123725-fariza-rahman" class="avatar tooltip"
+												title="Fariza Rahman"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/123725/small_thumb.jpg?1296011530" />
+											</a> <a href="/ikhwanzz" class="avatar tooltip" title="ikhwanzz"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/80183/small_thumb.JPG?1288196539" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a href="/places/62463-pak-mal-/items/72350-nasi-ayam"
+											onclick="toggleReviews(this, '/places/62463-pak-mal-/items/72350-nasi-ayam'); return false;"
+											title="Nasi Ayam @ Pak Mal">Nasi Ayam</a> <small> @ <a
+											href="/places/62463-pak-mal-"><strong>Pak Mal</strong>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/117910-mm55">Mm55</a> about 1 year
+										ago from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+									<h4>Featured on 1 guide</h4>
+									<div class='guides'>
+										<a href="/guides/2964-shah-alam-great-eat-s"
+											class="badge tooltip"
+											style="background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/2964/small_thumb.jpg?1313209806)"
+											title="Shah alam great eat's"><img alt="Badge-50px"
+											src="/images/badges/badge-50px.png?1327560950" />
+										</a>
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/72350-nasi-ayam">like
+												this</a> / <a href="/places/62463-pak-mal-">at this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/62463-pak-mal-/items/72350-nasi-ayam?per_page=10'); return false;">
+													<span class="count">4</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_147445'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/147445/want?review_id=317023', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (10)</a></li>
+											<li class='nom-it' id='nom_sighting_147445'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/147445/nom?review_id=317023', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">18</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_147445'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=317023&amp;amp;sighting_id=147445', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_147445'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_155155'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_13 ribbon' id='ribbon_sighting_155155'>
+										13 <small>noms</small>
+									</div>
+									<a href="/reviews/770265" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/770265/thumb_170.jpg?1313300082" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/107736-gerard-t" class="avatar tooltip"
+												title="Gerard T"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/107736/small_thumb.jpg?1293897702" />
+											</a> <a href="/78026-rn86" class="avatar tooltip" title="Rn86"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/78026/small_thumb.JPG?1323616811" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/65633-ding-tai-fung-singapore/items/191-xiao-long-bao"
+											onclick="toggleReviews(this, '/places/65633-ding-tai-fung-singapore/items/191-xiao-long-bao'); return false;"
+											title="Xiao Long Bao @ Ding Tai Fung">Xiao Long Bao</a> <small>
+											@ <a href="/places/65633-ding-tai-fung-singapore"><strong>Ding
+													Tai Fung</strong> - <span>Singapore</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/107736-gerard-t">Gerard T</a> 6
+										months ago from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/191-xiao-long-bao">like
+												this</a> / <a href="/places/65633-ding-tai-fung-singapore">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/65633-ding-tai-fung-singapore/items/191-xiao-long-bao?per_page=10'); return false;">
+													<span class="count">2</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_155155'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/155155/want?review_id=770265', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('87WqyXjbA4UX7ZecEPkn9yvXAxIsA2StM52GGTVoIkE=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (9)</a></li>
+											<li class='nom-it' id='nom_sighting_155155'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/155155/nom?review_id=770265', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('87WqyXjbA4UX7ZecEPkn9yvXAxIsA2StM52GGTVoIkE=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">13</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_155155'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=770265&amp;amp;sighting_id=155155', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('87WqyXjbA4UX7ZecEPkn9yvXAxIsA2StM52GGTVoIkE=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_155155'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_101925'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_10 ribbon' id='ribbon_sighting_101925'>
+										10 <small>noms</small>
+									</div>
+									<a href="/reviews/669572" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/669572/thumb_170.jpg?1309513489" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a href="/kirari"
+												class="avatar tooltip" title="Kirari"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/96647/small_thumb.jpg?1291995715" />
+											</a> <a href="/117044-mild-kakkanang" class="avatar tooltip"
+												title="miLd Kakkanang"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/117044/small_thumb.jpg?1321264498" />
+											</a> <a href="/neko" class="avatar tooltip" title="Pinku Neko"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/50126/small_thumb.jpg?1317487461" />
+											</a> <a href="/macroart" class="avatar tooltip"
+												title="Apisilp Trunganont"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/85095/small_thumb.jpg?1288710257" />
+											</a> <a href="/beaubora" class="avatar tooltip" title="Beaubora"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/127080/small_thumb.jpg?1296783757" />
+											</a> <a href="/pongchai" class="avatar tooltip" title="Pongchai"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/17828/small_thumb.jpg?1308284427" />
+											</a> <a href="/nutjung" class="avatar tooltip" title="nutjung"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/122731/small_thumb.JPG?1295773805" />
+											</a> <span class='others'> 8 others </span>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/44192-gindaco-thailand-ratchadaphisek/items/595-takoyaki"
+											onclick="toggleReviews(this, '/places/44192-gindaco-thailand-ratchadaphisek/items/595-takoyaki'); return false;"
+											title="Takoyaki @ Gindaco (Thailand)">Takoyaki</a> <small>
+											@ <a href="/places/44192-gindaco-thailand-ratchadaphisek"><strong>Gindaco
+													(Thailand)</strong> - <span>Ratchadaphisek, Bangkok</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/neko">Pinku Neko</a> 7 months ago
+										from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/595-takoyaki">like
+												this</a> / <a
+												href="/places/44192-gindaco-thailand-ratchadaphisek">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/44192-gindaco-thailand-ratchadaphisek/items/595-takoyaki?per_page=10'); return false;">
+													<span class="count">15</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_101925'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/101925/want?review_id=669572', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('lTsASC9PFi6adpS4qJtBwLndyixE8UTaXsK2C8lod0A=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (12)</a></li>
+											<li class='nom-it' id='nom_sighting_101925'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/101925/nom?review_id=669572', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('lTsASC9PFi6adpS4qJtBwLndyixE8UTaXsK2C8lod0A=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">10</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_101925'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=669572&amp;amp;sighting_id=101925', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('lTsASC9PFi6adpS4qJtBwLndyixE8UTaXsK2C8lod0A=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_101925'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_141681'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_7 ribbon' id='ribbon_sighting_141681'>
+										7 <small>noms</small>
+									</div>
+									<a href="/reviews/159423" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/159423/thumb_170.jpg?1287113396" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/bubbles182" class="avatar tooltip" title="bubbles182"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/66118/small_thumb.JPG?1287066054" />
+											</a> <a href="/263198-teratai-nailofar" class="avatar tooltip"
+												title="Teratai Nailofar"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/263198/small_thumb.?1315491335" />
+											</a> <a href="/whatieight" class="avatar tooltip"
+												title="whatieight"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/122634/small_thumb.jpg?1322720188" />
+											</a> <a href="/marzukikamal" class="avatar tooltip"
+												title="Marzuki Kamal"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/86904/small_thumb.JPG?1289146588" />
+											</a> <a href="/50469-aedewan" class="avatar tooltip"
+												title="Aedewan"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/39397-restoran-kapitan-georgetown-/items/75091-cheese-naan-with-tandoori-chicken"
+											onclick="toggleReviews(this, '/places/39397-restoran-kapitan-georgetown-/items/75091-cheese-naan-with-tandoori-chicken'); return false;"
+											title="Cheese Naan with Tandoori Chicken @ Restoran Kapitan">Cheese
+											Naan with Tandoori Chicken</a> <small> @ <a
+											href="/places/39397-restoran-kapitan-georgetown-"><strong>Restoran
+													Kapitan</strong> - <span>Georgetown , Malaysia </span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/bubbles182">bubbles182</a> over 1
+										year ago from web.
+									</div>
+									<h4>Featured on 1 guide</h4>
+									<div class='guides'>
+										<a href="/guides/621-foods-you-must-try-in-penang"
+											class="badge tooltip"
+											style="background-image: url(http://www.foodspotting.com/images/guides/badge_default_small_thumb.png)"
+											title="Foods you must try in Penang"><img
+											alt="Badge-50px"
+											src="/images/badges/badge-50px.png?1327560950" />
+										</a>
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a
+												href="/items/75091-cheese-naan-with-tandoori-chicken">like
+												this</a> / <a href="/places/39397-restoran-kapitan-georgetown-">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/39397-restoran-kapitan-georgetown-/items/75091-cheese-naan-with-tandoori-chicken?per_page=10'); return false;">
+													<span class="count">5</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_141681'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/141681/want?review_id=159423', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (5)</a></li>
+											<li class='nom-it' id='nom_sighting_141681'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/141681/nom?review_id=159423', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">7</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_141681'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=159423&amp;amp;sighting_id=141681', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_141681'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_205395'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_6 ribbon' id='ribbon_sighting_205395'>
+										6 <small>noms</small>
+									</div>
+									<a href="/reviews/1139167" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/1139167/thumb_170.jpg?1324251178" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/270642-mohd-farouk" class="avatar tooltip"
+												title="mohd farouk"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/270642/small_thumb.bmp?1322032754" />
+											</a> <a href="/194782-linda-ng" class="avatar tooltip"
+												title="Linda Ng"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/tomtom99" class="avatar tooltip" title="Tomtom"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/83153/small_thumb.JPG?1288451298" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/84656-pak-putra-malacca/items/1861-tandoori-chicken"
+											onclick="toggleReviews(this, '/places/84656-pak-putra-malacca/items/1861-tandoori-chicken'); return false;"
+											title="Tandoori Chicken @ Pak Putra">Tandoori Chicken</a> <small>
+											@ <a href="/places/84656-pak-putra-malacca"><strong>Pak
+													Putra</strong> - <span>Malacca, 75200</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/270642-mohd-farouk">mohd farouk</a>
+										about 1 month ago from <a
+											href='http://www.foodspotting.com/android'>Android</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/1861-tandoori-chicken">like
+												this</a> / <a href="/places/84656-pak-putra-malacca">at this
+												place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/84656-pak-putra-malacca/items/1861-tandoori-chicken?per_page=10'); return false;">
+													<span class="count">3</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_205395'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/205395/want?review_id=1139167', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (1)</a></li>
+											<li class='nom-it' id='nom_sighting_205395'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/205395/nom?review_id=1139167', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">6</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_205395'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=1139167&amp;amp;sighting_id=205395', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_205395'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_43032'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_6 ribbon' id='ribbon_sighting_43032'>
+										6 <small>noms</small>
+									</div>
+									<a href="/reviews/170686" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/170686/thumb_170.jpg?1287646313" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a href="/pongchai"
+												class="avatar tooltip" title="Pongchai"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/17828/small_thumb.jpg?1308284427" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/19415-sabroso-wattana/items/25404-classic-tacos-with-seasoned-ground-beef"
+											onclick="toggleReviews(this, '/places/19415-sabroso-wattana/items/25404-classic-tacos-with-seasoned-ground-beef'); return false;"
+											title="Classic Tacos with Seasoned Ground Beef @ Sabroso">Classic
+											Tacos with Seasoned Ground Beef</a> <small> @ <a
+											href="/places/19415-sabroso-wattana"><strong>Sabroso</strong>
+												- <span>Wattana, Bangkok</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/pongchai">Pongchai</a> over 1 year
+										ago from web.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a
+												href="/items/25404-classic-tacos-with-seasoned-ground-beef">like
+												this</a> / <a href="/places/19415-sabroso-wattana">at this
+												place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/19415-sabroso-wattana/items/25404-classic-tacos-with-seasoned-ground-beef?per_page=10'); return false;">
+													<span class="count">3</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_43032'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/43032/want?review_id=170686', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('DTKGM3PbDbDb3TCYrTYcukbhzn4rPIAkB53IvNsZ5cw=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (8)</a></li>
+											<li class='nom-it' id='nom_sighting_43032'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/43032/nom?review_id=170686', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('DTKGM3PbDbDb3TCYrTYcukbhzn4rPIAkB53IvNsZ5cw=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">6</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_43032'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=170686&amp;amp;sighting_id=43032', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('DTKGM3PbDbDb3TCYrTYcukbhzn4rPIAkB53IvNsZ5cw=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_43032'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_134523'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_6 ribbon' id='ribbon_sighting_134523'>
+										6 <small>noms</small>
+									</div>
+									<a href="/reviews/871292" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/871292/thumb_170.jpg?1316099555" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/270980-abu-basketballer" class="avatar tooltip"
+												title="Abu Basketballer"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/270980/small_thumb.?1316097338" />
+											</a> <a href="/48244-mike-campton" class="avatar tooltip"
+												title="Mike Campton"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/96086-shameem" class="avatar tooltip"
+												title="Shameem"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/96086/small_thumb.JPG?1308754844" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/56815-gold-chilli-subang-jaya/items/6394-butter-chicken"
+											onclick="toggleReviews(this, '/places/56815-gold-chilli-subang-jaya/items/6394-butter-chicken'); return false;"
+											title="Butter Chicken @ Gold Chilli">Butter Chicken</a> <small>
+											@ <a href="/places/56815-gold-chilli-subang-jaya"><strong>Gold
+													Chilli</strong> - <span>Subang Jaya, Selangor</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/270980-abu-basketballer">Abu
+											Basketballer</a> 5 months ago from web.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/6394-butter-chicken">like
+												this</a> / <a href="/places/56815-gold-chilli-subang-jaya">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/56815-gold-chilli-subang-jaya/items/6394-butter-chicken?per_page=10'); return false;">
+													<span class="count">3</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_134523'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/134523/want?review_id=871292', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (5)</a></li>
+											<li class='nom-it' id='nom_sighting_134523'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/134523/nom?review_id=871292', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">6</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_134523'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=871292&amp;amp;sighting_id=134523', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_134523'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_642096'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_6 ribbon' id='ribbon_sighting_642096'>
+										6 <small>noms</small>
+									</div>
+									<a href="/reviews/739280" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/739280/thumb_170.jpg?1312204707" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a href="/neko"
+												class="avatar tooltip" title="Pinku Neko"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/50126/small_thumb.jpg?1317487461" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a href="/places/10154-uomasa-wattana-/items/1741-unagi"
+											onclick="toggleReviews(this, '/places/10154-uomasa-wattana-/items/1741-unagi'); return false;"
+											title="Unagi @ Uomasa">Unagi</a> <small> @ <a
+											href="/places/10154-uomasa-wattana-"><strong>Uomasa</strong>
+												- <span>Wattana , Bangkok </span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/neko">Pinku Neko</a> 6 months ago
+										from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/1741-unagi">like
+												this</a> / <a href="/places/10154-uomasa-wattana-">at this
+												place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/10154-uomasa-wattana-/items/1741-unagi?per_page=10'); return false;">
+													<span class="count">1</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_642096'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/642096/want?review_id=739280', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (2)</a></li>
+											<li class='nom-it' id='nom_sighting_642096'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/642096/nom?review_id=739280', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">6</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_642096'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=739280&amp;amp;sighting_id=642096', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_642096'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_35241'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_5 ribbon' id='ribbon_sighting_35241'>
+										5 <small>noms</small>
+									</div>
+									<a href="/reviews/1102741" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/1102741/thumb_170.jpg?1323050036" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/FeatherGirl" class="avatar tooltip"
+												title="FeatherGirl"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/54480/small_thumb.jpg?1288975383" />
+											</a> <a href="/dor" class="avatar tooltip" title="Dor"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/18834/small_thumb.jpg?1288914794" />
+											</a> <a href="/137446-jason" class="avatar tooltip" title="Jason"><img
+												alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/183736-ling" class="avatar tooltip" title="Ling"><img
+												alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/96682-mr-miyagi" class="avatar tooltip"
+												title="Mr Miyagi"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/93897-johan-chan" class="avatar tooltip"
+												title="Johan Chan"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/wen" class="avatar tooltip" title="Wen"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/6383/small_thumb.jpg?1290042563" />
+											</a> <span class='others'> 3 others </span>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/18309-imperial-treasure-super-peking-duck-singapore/items/1724-peking-duck"
+											onclick="toggleReviews(this, '/places/18309-imperial-treasure-super-peking-duck-singapore/items/1724-peking-duck'); return false;"
+											title="Peking Duck @ Imperial Treasure Super Peking Duck">Peking
+											Duck</a> <small> @ <a
+											href="/places/18309-imperial-treasure-super-peking-duck-singapore"><strong>Imperial
+													Treasure Super Peking Duck</strong> - <span>Singapore,
+													Singapore</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/FeatherGirl">FeatherGirl</a> about 1
+										month ago from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/1724-peking-duck">like
+												this</a> / <a
+												href="/places/18309-imperial-treasure-super-peking-duck-singapore">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/18309-imperial-treasure-super-peking-duck-singapore/items/1724-peking-duck?per_page=10'); return false;">
+													<span class="count">10</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_35241'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/35241/want?review_id=1102741', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (9)</a></li>
+											<li class='nom-it' id='nom_sighting_35241'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/35241/nom?review_id=1102741', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">5</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_35241'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=1102741&amp;amp;sighting_id=35241', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_35241'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_155142'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_5 ribbon' id='ribbon_sighting_155142'>
+										5 <small>noms</small>
+									</div>
+									<a href="/reviews/174062" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/174062/thumb_170.jpg?1287812092" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/78026-rn86" class="avatar tooltip" title="Rn86"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/78026/small_thumb.JPG?1323616811" />
+											</a> <a href="/119012-makan-raider" class="avatar tooltip"
+												title="Makan Raider"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/119012/small_thumb.jpg?1299928531" />
+											</a> <a href="/268022-qiu-zain" class="avatar tooltip"
+												title="Qiu Zain"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/268022/small_thumb.txt?1315847851" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/65627-boon-lay-place-food-centre-/items/7330-nasi-lemak"
+											onclick="toggleReviews(this, '/places/65627-boon-lay-place-food-centre-/items/7330-nasi-lemak'); return false;"
+											title="Nasi Lemak @ Boon Lay Place Food Centre">Nasi
+											Lemak</a> <small> @ <a
+											href="/places/65627-boon-lay-place-food-centre-"><strong>Boon
+													Lay Place Food Centre</strong>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/78026-rn86">Rn86</a> over 1 year ago
+										from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/7330-nasi-lemak">like
+												this</a> / <a href="/places/65627-boon-lay-place-food-centre-">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/65627-boon-lay-place-food-centre-/items/7330-nasi-lemak?per_page=10'); return false;">
+													<span class="count">3</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_155142'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/155142/want?review_id=174062', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('87WqyXjbA4UX7ZecEPkn9yvXAxIsA2StM52GGTVoIkE=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (1)</a></li>
+											<li class='nom-it' id='nom_sighting_155142'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/155142/nom?review_id=174062', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('87WqyXjbA4UX7ZecEPkn9yvXAxIsA2StM52GGTVoIkE=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">5</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_155142'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=174062&amp;amp;sighting_id=155142', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('87WqyXjbA4UX7ZecEPkn9yvXAxIsA2StM52GGTVoIkE=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_155142'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_10883'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_5 ribbon' id='ribbon_sighting_10883'>
+										5 <small>noms</small>
+									</div>
+									<a href="/reviews/12283" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/12283/thumb_170.JPG?1266037884" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a href="/rfung8"
+												class="avatar tooltip" title="Randy F."><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/459/small_thumb.jpg?1314229399" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/5801-beach-corner-batu-ferringhi/items/183-spring-rolls"
+											onclick="toggleReviews(this, '/places/5801-beach-corner-batu-ferringhi/items/183-spring-rolls'); return false;"
+											title="Spring Rolls @ Beach Corner">Spring Rolls</a> <small>
+											@ <a href="/places/5801-beach-corner-batu-ferringhi"><strong>Beach
+													Corner</strong> - <span>Batu Ferringhi, Penang</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/rfung8">Randy F.</a> almost 2 years
+										ago from web.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/183-spring-rolls">like
+												this</a> / <a href="/places/5801-beach-corner-batu-ferringhi">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/5801-beach-corner-batu-ferringhi/items/183-spring-rolls?per_page=10'); return false;">
+													<span class="count">1</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_10883'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/10883/want?review_id=12283', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (1)</a></li>
+											<li class='nom-it' id='nom_sighting_10883'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/10883/nom?review_id=12283', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">5</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_10883'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=12283&amp;amp;sighting_id=10883', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_10883'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_79512'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_4 ribbon' id='ribbon_sighting_79512'>
+										4 <small>noms</small>
+									</div>
+									<a href="/reviews/685341" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/685341/thumb_170.jpg?1310124997" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/161655-kharl" class="avatar tooltip" title="Kharl"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/161655/small_thumb.jpg?1312051390" />
+											</a> <a href="/24050-menn" class="avatar tooltip" title="Menn"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/24050/small_thumb.jpg?1276834416" />
+											</a> <a href="/neko" class="avatar tooltip" title="Pinku Neko"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/50126/small_thumb.jpg?1317487461" />
+											</a> <span class='others'> 4 others </span>
+										</div>
+									</div>
+									<h3>
+										<a href="/places/35280-bankara-ramen-/items/1241-gyoza"
+											onclick="toggleReviews(this, '/places/35280-bankara-ramen-/items/1241-gyoza'); return false;"
+											title="Gyoza @ Bankara Ramen">Gyoza</a> <small> @ <a
+											href="/places/35280-bankara-ramen-"><strong>Bankara
+													Ramen</strong> - <span>Bangkok</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/neko">Pinku Neko</a> 7 months ago
+										from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+									<h4>Featured on 1 guide</h4>
+									<div class='guides'>
+										<a href="/guides/1385-bankara-ramen" class="badge tooltip"
+											style="background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/1385/small_thumb.JPG?1296062726)"
+											title="Bankara Ramen"><img alt="Badge-50px"
+											src="/images/badges/badge-50px.png?1327560950" />
+										</a>
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/1241-gyoza">like
+												this</a> / <a href="/places/35280-bankara-ramen-">at this
+												place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/35280-bankara-ramen-/items/1241-gyoza?per_page=10'); return false;">
+													<span class="count">11</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_79512'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/79512/want?review_id=685341', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (10)</a></li>
+											<li class='nom-it' id='nom_sighting_79512'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/79512/nom?review_id=685341', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">4</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_79512'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=685341&amp;amp;sighting_id=79512', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_79512'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_257689'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_4 ribbon' id='ribbon_sighting_257689'>
+										4 <small>noms</small>
+									</div>
+									<a href="/reviews/688525" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/688525/thumb_170.jpg?1310236729" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a href="/neko"
+												class="avatar tooltip" title="Pinku Neko"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/50126/small_thumb.jpg?1317487461" />
+											</a> <a href="/kirari" class="avatar tooltip" title="Kirari"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/96647/small_thumb.jpg?1291995715" />
+											</a> <span class='others'> 4 others </span>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/83088-sukhumvit-38-night-food-stalls-/items/88096-chinese-egg-noodles-with-red-pork"
+											onclick="toggleReviews(this, '/places/83088-sukhumvit-38-night-food-stalls-/items/88096-chinese-egg-noodles-with-red-pork'); return false;"
+											title="Chinese Egg Noodles With Red Pork @ Sukhumvit 38 Night Food Stalls">Chinese
+											Egg Noodles With Red Pork</a> <small> @ <a
+											href="/places/83088-sukhumvit-38-night-food-stalls-"><strong>Sukhumvit
+													38 Night Food Stalls</strong>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/neko">Pinku Neko</a> 7 months ago
+										from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a
+												href="/items/88096-chinese-egg-noodles-with-red-pork">like
+												this</a> / <a
+												href="/places/83088-sukhumvit-38-night-food-stalls-">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/83088-sukhumvit-38-night-food-stalls-/items/88096-chinese-egg-noodles-with-red-pork?per_page=10'); return false;">
+													<span class="count">11</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_257689'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/257689/want?review_id=688525', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (8)</a></li>
+											<li class='nom-it' id='nom_sighting_257689'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/257689/nom?review_id=688525', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">4</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_257689'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=688525&amp;amp;sighting_id=257689', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_257689'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_608459'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_4 ribbon' id='ribbon_sighting_608459'>
+										4 <small>noms</small>
+									</div>
+									<a href="/reviews/1076788" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/1076788/thumb_170.jpg?1322289834" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a href="/pongchai"
+												class="avatar tooltip" title="Pongchai"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/17828/small_thumb.jpg?1308284427" />
+											</a> <a href="/neko" class="avatar tooltip" title="Pinku Neko"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/50126/small_thumb.jpg?1317487461" />
+											</a> <span class='others'> 1 other </span>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/208681-basara-ka-ramen-the-nine-neighborhood-center-/items/1241-gyoza"
+											onclick="toggleReviews(this, '/places/208681-basara-ka-ramen-the-nine-neighborhood-center-/items/1241-gyoza'); return false;"
+											title="Gyoza @ Basara-Ka Ramen - The Nine Neighborhood Center">Gyoza</a>
+										<small> @ <a
+											href="/places/208681-basara-ka-ramen-the-nine-neighborhood-center-"><strong>Basara-Ka
+													Ramen - The Nine Neighborhood Center</strong>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/pongchai">Pongchai</a> 2 months ago
+										from web.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/1241-gyoza">like
+												this</a> / <a
+												href="/places/208681-basara-ka-ramen-the-nine-neighborhood-center-">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/208681-basara-ka-ramen-the-nine-neighborhood-center-/items/1241-gyoza?per_page=10'); return false;">
+													<span class="count">8</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_608459'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/608459/want?review_id=1076788', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (11)</a></li>
+											<li class='nom-it' id='nom_sighting_608459'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/608459/nom?review_id=1076788', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">4</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_608459'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=1076788&amp;amp;sighting_id=608459', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_608459'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_271827'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_4 ribbon' id='ribbon_sighting_271827'>
+										4 <small>noms</small>
+									</div>
+									<a href="/reviews/449587" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/449587/thumb_170.jpg?1301060547" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/85992-sandyhikki" class="avatar tooltip"
+												title="SandyHikki"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/85992/small_thumb.JPG?1295190087" />
+											</a> <a href="/121749-palmzila" class="avatar tooltip"
+												title="Palmzila"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/121749/small_thumb.jpg?1300871969" />
+											</a> <a href="/183758-nannaan" class="avatar tooltip"
+												title="Nannaan"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/235851-myromance" class="avatar tooltip"
+												title="myromance"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/235851/small_thumb.jpg?1314931071" />
+											</a> <a href="/porkygourmand" class="avatar tooltip"
+												title="Porkygourmand"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/66112/small_thumb.jpg?1327905867" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a href="/places/109052-kizahashi-/items/142-okonomiyaki"
+											onclick="toggleReviews(this, '/places/109052-kizahashi-/items/142-okonomiyaki'); return false;"
+											title="Okonomiyaki @ Kizahashi">Okonomiyaki</a> <small>
+											@ <a href="/places/109052-kizahashi-"><strong>Kizahashi</strong>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/121749-palmzila">Palmzila</a> 10
+										months ago from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/142-okonomiyaki">like
+												this</a> / <a href="/places/109052-kizahashi-">at this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/109052-kizahashi-/items/142-okonomiyaki?per_page=10'); return false;">
+													<span class="count">7</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_271827'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/271827/want?review_id=449587', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (3)</a></li>
+											<li class='nom-it' id='nom_sighting_271827'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/271827/nom?review_id=449587', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">4</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_271827'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=449587&amp;amp;sighting_id=271827', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_271827'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_38782'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_4 ribbon' id='ribbon_sighting_38782'>
+										4 <small>noms</small>
+									</div>
+									<a href="/reviews/827917" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/827917/thumb_170.jpg?1314895806" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/mydeliciouslife" class="avatar tooltip"
+												title="my delicious life"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/86879/small_thumb.jpg?1326978335" />
+											</a> <a href="/107736-gerard-t" class="avatar tooltip"
+												title="Gerard T"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/107736/small_thumb.jpg?1293897702" />
+											</a> <a href="/122399-sgeugene" class="avatar tooltip"
+												title="Sgeugene"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/dor" class="avatar tooltip" title="Dor"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/18834/small_thumb.jpg?1288914794" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/19692-beach-road-scissors-cut-curry-rice-/items/2527-curry-rice"
+											onclick="toggleReviews(this, '/places/19692-beach-road-scissors-cut-curry-rice-/items/2527-curry-rice'); return false;"
+											title="curry rice @ Beach Road Scissors Cut Curry Rice">curry
+											rice</a> <small> @ <a
+											href="/places/19692-beach-road-scissors-cut-curry-rice-"><strong>Beach
+													Road Scissors Cut Curry Rice</strong> - <span>Singapore</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/mydeliciouslife">my delicious
+											life</a> 5 months ago from <a
+											href='http://www.foodspotting.com/android'>Android</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/2527-curry-rice">like
+												this</a> / <a
+												href="/places/19692-beach-road-scissors-cut-curry-rice-">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/19692-beach-road-scissors-cut-curry-rice-/items/2527-curry-rice?per_page=10'); return false;">
+													<span class="count">4</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_38782'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/38782/want?review_id=827917', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (3)</a></li>
+											<li class='nom-it' id='nom_sighting_38782'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/38782/nom?review_id=827917', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">4</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_38782'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=827917&amp;amp;sighting_id=38782', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_38782'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_159019'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_4 ribbon' id='ribbon_sighting_159019'>
+										4 <small>noms</small>
+									</div>
+									<a href="/reviews/467016" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/467016/thumb_170.jpg?1301676484" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a href="/kirari"
+												class="avatar tooltip" title="Kirari"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/96647/small_thumb.jpg?1291995715" />
+											</a> <a href="/neko" class="avatar tooltip" title="Pinku Neko"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/50126/small_thumb.jpg?1317487461" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/35280-bankara-ramen-/items/80453-tori-karaage"
+											onclick="toggleReviews(this, '/places/35280-bankara-ramen-/items/80453-tori-karaage'); return false;"
+											title="Tori Karaage @ Bankara Ramen">Tori Karaage</a> <small>
+											@ <a href="/places/35280-bankara-ramen-"><strong>Bankara
+													Ramen</strong> - <span>Bangkok</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/neko">Pinku Neko</a> 10 months ago
+										from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+									<h4>Featured on 1 guide</h4>
+									<div class='guides'>
+										<a href="/guides/1385-bankara-ramen" class="badge tooltip"
+											style="background-image: url(http://s3.amazonaws.com/foodspotting-ec2/guides/1385/small_thumb.JPG?1296062726)"
+											title="Bankara Ramen"><img alt="Badge-50px"
+											src="/images/badges/badge-50px.png?1327560950" />
+										</a>
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/80453-tori-karaage">like
+												this</a> / <a href="/places/35280-bankara-ramen-">at this
+												place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/35280-bankara-ramen-/items/80453-tori-karaage?per_page=10'); return false;">
+													<span class="count">4</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_159019'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/159019/want?review_id=467016', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (6)</a></li>
+											<li class='nom-it' id='nom_sighting_159019'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/159019/nom?review_id=467016', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">4</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_159019'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=467016&amp;amp;sighting_id=159019', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_159019'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_100238'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_4 ribbon' id='ribbon_sighting_100238'>
+										4 <small>noms</small>
+									</div>
+									<a href="/reviews/602058" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/602058/thumb_170.jpg?1306847473" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a
+												href="/suannchonglee" class="avatar tooltip"
+												title="Suannchong"><img alt="Missing"
+												src="/avatars/small_thumb/missing.png?1327560947" />
+											</a> <a href="/Abbie" class="avatar tooltip" title="Abbie"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/4719/small_thumb.jpg?1267632187" />
+											</a> <a href="/triccieps" class="avatar tooltip"
+												title="triccieps"><img alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/160268/small_thumb.jpg?1301475888" />
+											</a> <a href="/keslergo" class="avatar tooltip" title="keslergo"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/39273/small_thumb.jpg?1283443990" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/43589-din-tai-fung-paragon-shopping-centre-/items/191-xiao-long-bao"
+											onclick="toggleReviews(this, '/places/43589-din-tai-fung-paragon-shopping-centre-/items/191-xiao-long-bao'); return false;"
+											title="Xiao Long Bao @ Din Tai Fung – Paragon Shopping Centre ">Xiao
+											Long Bao</a> <small> @ <a
+											href="/places/43589-din-tai-fung-paragon-shopping-centre-"><strong>Din
+													Tai Fung – Paragon Shopping Centre </strong> - <span>Singapore</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/suannchonglee">Suannchong</a> 8
+										months ago from <a href='http://www.foodspotting.com/iphone'>iPhone</a>.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/191-xiao-long-bao">like
+												this</a> / <a
+												href="/places/43589-din-tai-fung-paragon-shopping-centre-">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/43589-din-tai-fung-paragon-shopping-centre-/items/191-xiao-long-bao?per_page=10'); return false;">
+													<span class="count">4</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_100238'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/100238/want?review_id=602058', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (4)</a></li>
+											<li class='nom-it' id='nom_sighting_100238'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/100238/nom?review_id=602058', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">4</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_100238'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=602058&amp;amp;sighting_id=100238', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_100238'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+						<li class='clearfix hreview-aggregate sighting'
+							id='sighting_117282'>
+							<div class='item hproduct'>
+								<div class='sighting-box clearfix'>
+									<div class='count_4 ribbon' id='ribbon_sighting_117282'>
+										4 <small>noms</small>
+									</div>
+									<a href="/reviews/665971" class="photo t-170"><img
+										alt="Thumb_170"
+										src="http://s3.amazonaws.com/foodspotting-ec2/reviews/665971/thumb_170.jpg?1309368035" />
+									</a>
+									<div class='spotted-by'>
+										<div class='clearfix'>
+											<span class='label'>Spotted by...</span> <a href="/neko"
+												class="avatar tooltip" title="Pinku Neko"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/50126/small_thumb.jpg?1317487461" />
+											</a> <a href="/pongchai" class="avatar tooltip" title="Pongchai"><img
+												alt="Small_thumb"
+												src="http://s3.amazonaws.com/foodspotting-ec2/people/17828/small_thumb.jpg?1308284427" />
+											</a>
+										</div>
+									</div>
+									<h3>
+										<a
+											href="/places/50049-%E0%B9%84%E0%B8%81-%E0%B8%A2-%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%8D-%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87/items/752-roast-chicken"
+											onclick="toggleReviews(this, '/places/50049-%E0%B9%84%E0%B8%81-%E0%B8%A2-%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%8D-%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87/items/752-roast-chicken'); return false;"
+											title="Roast Chicken @ ไก่ย่างเสือใหญ่">Roast Chicken</a> <small>
+											@ <a
+											href="/places/50049-%E0%B9%84%E0%B8%81-%E0%B8%A2-%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%8D-%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87"><strong>ไก่ย่างเสือใหญ่</strong>
+												- <span>สะพานสูง, Bangkok</span>
+										</a> </small>
+									</h3>
+									<div class='last_sighting'>
+										Last spotted by <a href="/neko">Pinku Neko</a> 7 months ago
+										from web.
+									</div>
+								</div>
+								<div class='action-bar'>
+									<div class='actions'>
+										<div class='sighting-admin-actions'></div>
+										<div class='right'>
+											<strong>More:</strong> <a href="/items/752-roast-chicken">like
+												this</a> / <a
+												href="/places/50049-%E0%B9%84%E0%B8%81-%E0%B8%A2-%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%8D-%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87">at
+												this place</a>
+										</div>
+										<ul>
+											<li class='show-sightings'><a class='sighting-count'
+												href='#'
+												onclick="toggleReviews(this, '/places/50049-%E0%B9%84%E0%B8%81-%E0%B8%A2-%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%8D-%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87/items/752-roast-chicken?per_page=10'); return false;">
+													<span class="count">3</span> sightings </a></li>
+											<li class='want-it' id='want_sighting_117282'><a
+												href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/117282/want?review_id=665971', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to bookmark this so you can find it later!', 'want'); return false;"
+												rel="nofollow">Want it (4)</a></li>
+											<li class='nom-it' id='nom_sighting_117282'><a href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/sightings/117282/nom?review_id=665971', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to recommend this!', 'nom'); return false;"
+												rel="nofollow">Nom it (<span class="votes">4</span>)</a></li>
+											<li class='flag-it' id='flag_sighting_117282'><a
+												class="tooltip" href="#"
+												onclick="FS.authenticate(&quot;new Ajax.Request('/flags/new?review_id=665971&amp;amp;sighting_id=117282', {asynchronous:true, evalScripts:true, method:'get', parameters:'authenticity_token=' + encodeURIComponent('oMOeHffOSHIFa0XLWK40X7CYQDNc0QAkN6iqGp16Trg=')}); FS.hide_tooltip()&quot;, 'to flag this sighting.', 'flag'); return false;"
+												rel="nofollow"
+												title="Something wrong with this sighting? Flag it and let us know.">Flag</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<ul class='reviews list empty' id='reviews_sighting_117282'
+								style='display: none'>
+								<li class='review loading'><img alt="Cream-medium-load"
+									src="/images/cream-medium-load.gif?1327560950" /> Loading...</li>
+							</ul></li>
+
+					</ul>
+					<div class='pager-container clearfix'>
+						<div class="pagination">
+							<span class="previous_page disabled">&#8592; Previous</span> <em>1</em>
+							<a rel="next" href="/explore?page=2">2</a> <a
+								href="/explore?page=3">3</a> <a href="/explore?page=4">4</a> <a
+								href="/explore?page=5">5</a> <a href="/explore?page=6">6</a> <a
+								href="/explore?page=7">7</a> <a href="/explore?page=8">8</a> <a
+								href="/explore?page=9">9</a> <span class="gap">&hellip;</span> <a
+								href="/explore?page=49">49</a> <a href="/explore?page=50">50</a>
+							<a class="next_page" rel="next" href="/explore?page=2">Next
+								&#8594;</a>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+		</div>
+	</div>
+
+	<div id='ufholder'>
+		<div class='uf'>
+			<div class='creatures'></div>
+			<div class='clearBoth'></div>
+			<div class='ufblocks'>
+				<div class='ufblock ufblockpush'>
+					<div class='ufblocktitle'>Apps</div>
+					<div class='ufblockbox'>
+						<ul>
+							<li><a
+								href="http://itunes.apple.com/us/app/foodspotting/id350727118?mt=8"
+								target="_blank"><span class="ital">for</span> <span
+									class="strong">iPhone</span>
+							</a>
+							</li>
+							<li><a
+								href="https://market.android.com/details?id=com.foodspotting"
+								target="_blank"><span class="ital">for</span> <span
+									class="strong">Android</span>
+							</a>
+							</li>
+							<li><a
+								href="http://www.windowsphone.com/en-US/apps/55b55f3e-649b-e011-986b-78e7d1fa76f8"
+								target="_blank"><span class="ital">for</span> <span
+									class="strong">Windows Phone</span>
+							</a>
+							</li>
+						</ul>
+					</div>
+					<div class='clearBoth'></div>
+				</div>
+				<div class='ufblock ufblockpush'>
+					<div class='ufblocktitle'>Tools</div>
+					<div class='ufblockbox'>
+						<ul>
+							<li><a href="/about/business/"><span class="ital">for</span>
+									<span class="strong">Restaurants</span>
+							</a>
+							</li>
+							<li><a href="/about/media/"><span class="ital">for</span>
+									<span class="strong">Media, Brands &amp; Blogs</span>
+							</a>
+							</li>
+							<li><a href="/about/press/"><span class="ital">for</span>
+									<span class="strong">Press</span>
+							</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class='ufblock ufblockpush'>
+					<div class='ufblocktitle'>Team</div>
+					<div class='ufblockbox'>
+						<ul>
+							<li><a href="/about/"><span class="strong">About</span>
+									Foodspotting</a>
+							</li>
+							<li><a href="http://www.foodspotting.com/blog"><span
+									class="strong">Read</span> our blog</a>
+							</li>
+							<li><a href="/about/jobs"><span class="strong">Join</span>
+									our team <span class="ital">(we're hiring!)</span>
+							</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class='ufblock'>
+					<div class='ufblocktitle'>Fine Print</div>
+					<div class='ufblockbox'>
+						<ul>
+							<li><a href="/terms/"><span class="strong">Terms</span>
+									of Service</a>
+							</li>
+							<li><a href="/privacy/"><span class="strong">Privacy</span>
+									Policy</a>
+							</li>
+							<li><a href="/about/contact"><span class="strong">Contact</span>
+									Us</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class='clearBoth'></div>
+			<div class='uffinalline'>
+				<div class='uffinallineblock'>&copy; 2012 Foodspotting</div>
+				<div class='uffinallineblock'>&middot;</div>
+				<div class='uffinallineblock'>
+					We <span class="heart">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					You!</span>
+				</div>
+				<div class='uffinallineblock'>&middot;</div>
+				<div class='uffinallineblock'>
+					Fonts by <a href="http://typekit.com/colophons/gmg0plj"
+						target="_blank">Typekit</a>
+				</div>
+				<div class='uffinallineblock'>&middot;</div>
+				<div class='uffinallineblock uftwfollow'>
+					<a href="http://twitter.com/foodspotting"
+						class="twitter-follow-button" data-button="grey"
+						data-text-color="#FFFFFF" data-link-color="#FFFFFF"
+						data-show-count="false">Follow Foodspotting</a>
+					<script src="http://platform.twitter.com/widgets.js"
+						type="text/javascript"></script>
+				</div>
+				<div class='uffinallineblock'>
+					us on <a href="http://www.twitter.com/foodspotting">Twitter</a>
+				</div>
+				<div class='uffinallineblock'>&middot;</div>
+				<div class='uffinallineblock uffblike'>
+					<iframe
+						src="http://www.facebook.com/plugins/like.php?app_id=177192802349006&amp;href=www.facebook.com%2Ffoodspotting&amp;send=false&amp;layout=standard&amp;width=460&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=80"
+						scrolling="no" frameborder="0"
+						style="border: none; overflow: hidden; width: 460px; height: 25px;"
+						allowTransparency="true"></iframe>
+				</div>
+				<div class='uffinallineblock'>
+					us on <a href="http://www.facebook.com/foodspotting">Facebook</a>
+				</div>
+				<div class='uffinallineblock'>&middot;</div>
+				<div class='uffinallineblock'>
+					<script type="text/javascript">(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
+					<g:plusone size="small" annotation="none"
+						href="http://www.foodspotting.com"></g:plusone>
+				</div>
+				<div class='uffinallineblock'>
+					us on <a href="https://plus.google.com/108089624005932415102">Google+</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+ <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true_or_false&amp;key=ABQIAAAAGUwVmZURtP644UIO0KmZ7xT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ3Lx74Xf-bhNh1JNlYjep0rJhpMA" type="text/javascript"></script>
+
+
+	<script src="/javascripts/explore_map.js?1327560950"
+		type="text/javascript"></script>
+	<script type='text/javascript'>
+// <![CDATA[
+Sightings = [{"id":117282,"lat":13.7438825,"lng":100.6768051,"title":"Roast Chicken @ \u0e44\u0e01\u0e48\u0e22\u0e48\u0e32\u0e07\u0e40\u0e2a\u0e37\u0e2d\u0e43\u0e2b\u0e0d\u0e48","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/665971/thumb_90.jpg?1309368035","url":"/places/50049-%E0%B9%84%E0%B8%81-%E0%B8%A2-%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%8D-%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87/items/752-roast-chicken","address":"<span class=\"street-address\">150/1 \u0e16.\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e01\u0e23\u0e35\u0e11\u0e32</span> <span class=\"locality\">\u0e2a\u0e30\u0e1e\u0e32\u0e19\u0e2a\u0e39\u0e07</span>, <span class=\"region\">Bangkok</span>"},{"id":100238,"lat":1.3037868,"lng":103.8358137,"title":"Xiao Long Bao @ Din Tai Fung \u2013 Paragon Shopping Centre ","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/602058/thumb_90.jpg?1306847473","url":"/places/43589-din-tai-fung-paragon-shopping-centre-/items/191-xiao-long-bao","address":"<span class=\"street-address\">#B1-03/06 Paragon Shopping Centre, 290 Orchard Road</span>"},{"id":159019,"lat":13.7368739,"lng":100.5717304,"title":"Tori Karaage @ Bankara Ramen","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/467016/thumb_90.jpg?1301676484","url":"/places/35280-bankara-ramen-/items/80453-tori-karaage","address":"<span class=\"street-address\">Sukhumvit 39</span>, <span class=\"region\">Bangkok</span>"},{"id":38782,"lat":1.3095033,"lng":103.8578954,"title":"curry rice @ Beach Road Scissors Cut Curry Rice","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/827917/thumb_90.jpg?1314895806","url":"/places/19692-beach-road-scissors-cut-curry-rice-/items/2527-curry-rice","address":"<span class=\"street-address\">229 Jalan Besar</span>"},{"id":271827,"lat":13.72104,"lng":100.5708,"title":"Okonomiyaki @ Kizahashi","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/1264872/thumb_90.jpg?1327841370","url":"/places/109052-kizahashi-/items/142-okonomiyaki","address":""},{"id":608459,"lat":13.74112,"lng":100.6247,"title":"Gyoza @ Basara-Ka Ramen - The Nine Neighborhood Center","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/1076788/thumb_90.jpg?1322289834","url":"/places/208681-basara-ka-ramen-the-nine-neighborhood-center-/items/1241-gyoza","address":""},{"id":257689,"lat":13.72355,"lng":100.5788,"title":"Chinese Egg Noodles With Red Pork @ Sukhumvit 38 Night Food Stalls","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/863994/thumb_90.jpg?1315847435","url":"/places/83088-sukhumvit-38-night-food-stalls-/items/88096-chinese-egg-noodles-with-red-pork","address":""},{"id":79512,"lat":13.7368739,"lng":100.5717304,"title":"Gyoza @ Bankara Ramen","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/764709/thumb_90.JPG?1313166681","url":"/places/35280-bankara-ramen-/items/1241-gyoza","address":"<span class=\"street-address\">Sukhumvit 39</span>, <span class=\"region\">Bangkok</span>"},{"id":10883,"lat":5.4751435,"lng":100.2719635,"title":"Spring Rolls @ Beach Corner","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/12283/thumb_90.JPG?1266037884","url":"/places/5801-beach-corner-batu-ferringhi/items/183-spring-rolls","address":" <span class=\"locality\">Batu Ferringhi</span>, <span class=\"region\">Penang</span>"},{"id":155142,"lat":1.3459759,"lng":103.7133397,"title":"Nasi Lemak @ Boon Lay Place Food Centre","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/864017/thumb_90.jpg?1315847969","url":"/places/65627-boon-lay-place-food-centre-/items/7330-nasi-lemak","address":"<span class=\"street-address\">221B Boon Lay Place</span>"},{"id":35241,"lat":1.30393,"lng":103.83592,"title":"Peking Duck @ Imperial Treasure Super Peking Duck","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/1102741/thumb_90.jpg?1323050036","url":"/places/18309-imperial-treasure-super-peking-duck-singapore/items/1724-peking-duck","address":"<span class=\"street-address\">290 Orchard Road</span> <span class=\"extended-address\">#05-42/45 The Paragon</span> <span class=\"locality\">Singapore</span>"},{"id":642096,"lat":13.7422222,"lng":100.5858333,"title":"Unagi @ Uomasa","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/739280/thumb_90.jpg?1312204707","url":"/places/10154-uomasa-wattana-/items/1741-unagi","address":"<span class=\"street-address\">87 soi Thonglor 13 </span> <span class=\"extended-address\">Sukhumvit 55 Rd. </span> <span class=\"locality\">Wattana </span>, <span class=\"region\">Bangkok </span>"},{"id":134523,"lat":3.043901,"lng":101.5806499,"title":"Butter Chicken @ Gold Chilli","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/871292/thumb_90.jpg?1316099555","url":"/places/56815-gold-chilli-subang-jaya/items/6394-butter-chicken","address":"<span class=\"street-address\">7 Jalan SS15/8b</span> <span class=\"locality\">Subang Jaya</span>, <span class=\"region\">Selangor</span>"},{"id":43032,"lat":13.7422222,"lng":100.5858333,"title":"Classic Tacos with Seasoned Ground Beef @ Sabroso","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/170686/thumb_90.jpg?1287646313","url":"/places/19415-sabroso-wattana/items/25404-classic-tacos-with-seasoned-ground-beef","address":"<span class=\"street-address\">Tops Market Thonglor</span> <span class=\"extended-address\">Thonglor Soi 4</span> <span class=\"locality\">Wattana</span>, <span class=\"region\">Bangkok</span>"},{"id":205395,"lat":2.195496,"lng":102.243165,"title":"Tandoori Chicken @ Pak Putra","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/1139167/thumb_90.jpg?1324251178","url":"/places/84656-pak-putra-malacca/items/1861-tandoori-chicken","address":"<span class=\"street-address\">Jalan Laksamana 4 Taman Kota Laksamana</span> <span class=\"locality\">Malacca</span>, <span class=\"region\">75200</span>"},{"id":141681,"lat":5.4207376,"lng":100.3231304,"title":"Cheese Naan with Tandoori Chicken @ Restoran Kapitan","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/999460/thumb_90.jpg?1320032675","url":"/places/39397-restoran-kapitan-georgetown-/items/75091-cheese-naan-with-tandoori-chicken","address":"<span class=\"street-address\">93 Lebuh Chualia, 10200 Penang</span> <span class=\"locality\">Georgetown </span>, <span class=\"region\">Malaysia </span>"},{"id":101925,"lat":13.7129264,"lng":100.4788608,"title":"Takoyaki @ Gindaco (Thailand)","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/1039457/thumb_90.jpg?1321189491","url":"/places/44192-gindaco-thailand-ratchadaphisek/items/595-takoyaki","address":"<span class=\"street-address\">The Esplanade</span> <span class=\"locality\">Ratchadaphisek</span>, <span class=\"region\">Bangkok</span>"},{"id":155155,"lat":1.33965,"lng":103.70698,"title":"Xiao Long Bao @ Ding Tai Fung","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/770265/thumb_90.jpg?1313300082","url":"/places/65633-ding-tai-fung-singapore/items/191-xiao-long-bao","address":"<span class=\"street-address\">1 Jurong West Central 2</span> <span class=\"locality\">Singapore</span>"},{"id":147445,"lat":3.080653,"lng":101.5251,"title":"Nasi Ayam @ Pak Mal","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/1071525/thumb_90.jpg?1322113465","url":"/places/62463-pak-mal-/items/72350-nasi-ayam","address":""},{"id":24504,"lat":3.119791,"lng":101.61791,"title":"Mille Crepe @ Food Foundary","photo":"http://s3.amazonaws.com/foodspotting-ec2/reviews/876430/thumb_90.jpg?1316247798","url":"/places/12548-food-foundary-petaling-jaya/items/14968-mille-crepe","address":"<span class=\"street-address\">SS2</span> <span class=\"locality\">Petaling Jaya</span>, <span class=\"region\">Selangor</span>"}];
+Bounds = {"sw_point":[-1.4984411,93.779965],"ne_point":[9.8778707,110.171567]};
+LatLng = [4.210484,101.975766];
+recent_locations = ["Malaysia","Canada","Anywhere","1, Malaysia","Konsulat Amerika Serikat, Jalan Hayam Wuruk, Denpasar, Indonesia"];
+document.observe("dom:loaded", function() {
+  $('location').setAttribute("autocomplete", "off");
+  $('query').setAttribute("autocomplete", "off");
+});
+
+// ]]>
+</script>
+	<script type='text/javascript'>
+// <![CDATA[
+document.observe("dom:loaded", function() {
+  ReviewWidget.init_review_photo_picker();
+  ReviewWidget.set_item("Food", 1300);
+});
+// ]]>
+</script>
+
+
+	<script type='text/javascript'>
+var is_ssl = ("https:" == document.location.protocol);
+var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+	<script type='text/javascript'>
+var feedback_widget_options = {};
+
+feedback_widget_options.display = "overlay";  
+feedback_widget_options.company = "foodspotting";
+feedback_widget_options.placement = "right";
+feedback_widget_options.color = "#000";
+feedback_widget_options.style = "idea";
+
+var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+	<script type='text/javascript'>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+	<script type='text/javascript'>
+try {
+  var pageTracker = _gat._getTracker("UA-10073389-1");
+  pageTracker._trackPageview();
+} catch(err) {}
+</script>
+	<!-- KISSinsights for foodspotting.com -->
+	<script type='text/javascript'>
+var _kiq = _kiq || [];
+</script>
+	<script
+		src='//s3.amazonaws.com/j.kissinsights.com/u/5809/c22b9a859d0f06f366ba29866e085afb4b07cdca.js'
+		type='text/javascript'></script>
+	<script type='text/javascript'>
+_qoptions={
+qacct:"p-67HM1Vig24MFw"
+};
+</script>
+	<script src='http://edge.quantserve.com/quant.js'
+		type='text/javascript'></script>
+	<noscript>
+		<img alt='Quantcast' border='0' height='1'
+			src='http://pixel.quantserve.com/pixel/p-67HM1Vig24MFw.gif'
+			style='display: none;' width='1'>
+	</noscript>
+
+
+	<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";e.async=true;e.src="https://d1ros97qkrwjf5.cloudfront.net/30/eum/rum.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-1.newrelic.com","bd9c42ad04",152560,"egtWRxRaXVlSRRhYVlQBF1YeRV1aRVI=",0.0,2829,new Date().getTime(),"","","","",""])</script>
+</body>
+</html>
